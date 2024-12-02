@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Workout</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/workouts">Home</a>
+            <a href="/workouts/new">Log Workout</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Log a New Workout</h1>
+        <form action="/workouts" method="POST">
+            <label for="type">Workout Type:</label>
+            <select id="type" name="type" required>
+                <option value="" disabled selected>Select a workout type</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Strength Training">Strength Training</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Pilates">Pilates</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Running">Running</option>
+                <option value="Swimming">Swimming</option>
+                <option value="Hiking">Hiking</option>
+                <option value="Boxing">Boxing</option>
+                <option value="CrossFit">CrossFit</option>
+                <option value="Rowing">Rowing</option>
+                <option value="Dancing">Dancing</option>
+                <option value="Stretching">Stretching</option>
+                <option value="Climbing">Climbing</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Martial Arts">Martial Arts</option>
+                <option value="Golf">Golf</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" required>
+
+            <label for="calories_burned">Calories Burned:</label>
+            <input type="number" id="calories_burned" name="calories_burned">
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <button type="submit">Log Workout</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; <%= new Date().getFullYear() %> Fitness Tracker. All rights reserved.
+    </footer>
+
+    <script src="/scripts/dark-mode.js"></script>
+</body>
+</html>

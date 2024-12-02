@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/workouts">Home</a>
+            <a href="/workouts/new">Log Workout</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Workout Log</h1>
+        <div class="quote">
+            <p><em>"<%= randomQuote %>"</em></p>
+        </div>
+        <div class="stats">
+            <p>Total Workouts: <%= workouts.length %></p>
+            <p>Total Calories Burned: <%= workouts.reduce((total, workout) => total + (workout.calories_burned || 0), 0) %></p>
+        </div>
+
+        <ul>
+            <% workouts.forEach(workout => { %>
+                <li>
+                    <a href="/workouts/<%= workout.id %>">
+                        <%= workout.type %> - <%= new Date(workout.date).toLocaleString() %>
+                    </a>
+                    <p><strong>Notes:</strong> <%= workout.note || 'No notes provided' %></p>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+
+    <footer>
+        &copy; <%= new Date().getFullYear() %> Fitness Tracker. All rights reserved.
+    </footer>
+
+    <script src="/scripts/dark-mode.js"></script>
+</body>
+</html>
