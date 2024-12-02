@@ -2,6 +2,8 @@
 const express = require('express');
 const mariadb = require('mariadb');
 
+const methodOverride = require('method-override');
+
 // Configure the database connection
 const pool = mariadb.createPool({
     host: 'localhost',
@@ -30,6 +32,7 @@ const PORT = 3000; // Define the port
 app.use(express.urlencoded({ extended: true })); // Parse form data
 app.use(express.static('public')); // Serve static files
 app.set('view engine', 'ejs'); // Set EJS as the view engine
+app.use(methodOverride('_method'));
 
 // Routes
 
@@ -107,7 +110,7 @@ app.get('/about', (req, res) => {
 });
 
 // Delete a workout
-app.post('/workouts/:id/delete', async (req, res) => {
+app.delete('/workouts/:id', async (req, res) => {
     const { id } = req.params;
     const conn = await connect();
     try {
@@ -120,6 +123,7 @@ app.post('/workouts/:id/delete', async (req, res) => {
         conn.release();
     }
 });
+
 
 // Start the server
 app.listen(PORT, () => {
