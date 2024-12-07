@@ -24,7 +24,9 @@
         <div class="stats">
             <p>Total Workouts: <%= workouts.length %></p>
             <p>Total Calories Burned: <%= workouts.reduce((total, workout) => total + (workout.calories_burned || 0), 0) %></p>
+            <p>Total Workout Hours: <%= (workouts.reduce((total, workout) => total + (workout.duration || 0), 0) / 60).toFixed(2) %> hours</p>
         </div>
+        
 
         <ul>
             <% workouts.forEach(workout => { %>
