@@ -89,22 +89,6 @@ This project highlights several key technologies and concepts:
    git clone https://github.com/alstondsouza1/fitness-tracker.git
    cd fitness-tracker
    ```
-2. Install dependencies:  
-   ```bash
-   npm install
-   ```
-3. Configure the database:  
-   - Create a database called `fitness_tracker` and run the SQL script provided in `database-scripts/init.sql` to set up the `workouts` table.  
-   - Update the database connection settings in `app.js` if necessary.
-
-4. Start the application:  
-   ```bash
-   npm start
-   ```
-5. Open the app in your browser:  
-   ```
-   http://localhost:3000
-   ```
 
 ---
 
@@ -125,6 +109,20 @@ This project highlights several key technologies and concepts:
    ```
    Add any additional dependencies such as `mariadb` and `method-override` as needed.
 
-3. Follow the steps in **Setup Instructions** to complete the configuration and run the project.
+3. Configure the database:  
+   - Create a database called `fitness_tracker` and run the SQL script provided in `database-scripts/init.sql` to set up the `workouts` table.  
+   - Update the database connection settings in `app.js` if necessary.
+  
+4. Start the application:  
+   ```bash
+   npx nodemon
+   ```
+
+5. Open the app in your browser:  
+   ```
+   http://localhost:3000
+   ```
+
+6. Follow the steps in **Setup Instructions** to complete the configuration and run the project.
 
 ---
