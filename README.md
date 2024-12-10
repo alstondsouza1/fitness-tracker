@@ -1,4 +1,6 @@
-# Fitness Tracker Project  
+
+# Fitness Tracker Project
+
 **Author:** Alston Dsouza
 
 ---
@@ -6,7 +8,7 @@
 ## **Summary**  
 Fitness Tracker is a lightweight and user-friendly web application that helps users log and track their fitness workouts. The application provides an organized way to document and visualize workouts, encouraging users to maintain a consistent fitness routine.
 
-The app includes features such as logging new workouts, viewing a detailed workout log, and receiving motivational quotes to inspire users along their fitness journey.
+The app includes features such as logging new workouts, viewing a detailed workout log, receiving motivational quotes, and tracking total workout hours.
 
 ---
 
@@ -35,6 +37,9 @@ Users can log workouts with the following details:
 
 ### **4. Dark Mode**  
 - Users can toggle between light and dark modes for better readability and user preference.
+
+### **5. Total Workout Hours**  
+- The application calculates and displays the total number of workout hours logged by the user.
 
 ---
 
@@ -81,7 +86,7 @@ This project highlights several key technologies and concepts:
 ### **Steps**  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/fitness-tracker.git
+   git clone https://github.com/alstondsouza1/fitness-tracker.git
    cd fitness-tracker
    ```
 2. Install dependencies:  
@@ -103,3 +108,23 @@ This project highlights several key technologies and concepts:
 
 ---
 
+## **Project Setup**
+
+1. **Initialize the Project**  
+   From the project root directory, run the following command to initialize a new project:
+   ```bash
+   npm init
+   ```
+   - Set the entry point to `app.js`.  
+   - Use defaults for the remaining options.
+
+2. **Install Required Dependencies**  
+   Install the necessary Node.js packages:  
+   ```bash
+   npm install express ejs
+   ```
+   Add any additional dependencies such as `mariadb` and `method-override` as needed.
+
+3. Follow the steps in **Setup Instructions** to complete the configuration and run the project.
+
+---
